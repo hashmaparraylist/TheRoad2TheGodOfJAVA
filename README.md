@@ -119,9 +119,11 @@ java.lang.management.*、 javax.management.*
 junit、mock、mockito、内存数据库（h2）
 
 **1.3.11 正则表达式**
+
 java.lang.util.regex.*
 
 **1.3.12 常用的Java工具库**
+
 commons.lang, commons.*... guava-libraries netty
 
 **1.3.13 什么是API&SPI**
