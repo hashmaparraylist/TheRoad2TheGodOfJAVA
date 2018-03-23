@@ -36,11 +36,11 @@ classLoader、类加载过程、双亲委派（破坏双亲委派）、模块化
 
 jps, jstack, jmap、jstat, jconsole, jinfo, jhat, javap, btrace、TProfiler
 
-###1.2 编译与反编译
+### 1.2 编译与反编译
 
 javac 、javap 、jad 、CRF
 
-###1.3 Java基础知识
+### 1.3 Java基础知识
 
 **1.3.1 阅读源代码**
 
