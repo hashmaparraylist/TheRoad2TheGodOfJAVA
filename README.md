@@ -105,7 +105,7 @@ bio、nio和aio的区别、三种IO的用法与原理、netty
 
 **1.3.8 JMX**
 
-java.lang.management.*、 javax.management.*
+`java.lang.management.*、 javax.management.*`
 
 **1.3.9 泛型**
 
@@ -120,11 +120,11 @@ junit、mock、mockito、内存数据库（h2）
 
 **1.3.11 正则表达式**
 
-java.lang.util.regex.*
+`java.lang.util.regex.*`
 
 **1.3.12 常用的Java工具库**
 
-commons.lang, commons.*... guava-libraries netty
+`commons.lang, commons.*... guava-libraries netty`
 
 **1.3.13 什么是API&SPI**
 
@@ -285,3 +285,180 @@ cookie被禁用，如何实现session
 
 1. git & svn
 2. maven & gradle
+
+## 三、 高级篇
+
+### 3.1 新技术
+
+**3.1.1 Java 8**
+
+lambda表达式、Stream API、
+
+**3.1.2 Java 9**
+
+Jigsaw、Jshell、Reactive Streams
+
+**3.1.3 Java 10**
+
+局部变量类型推断、G1的并行Full GC、ThreadLocal握手机制
+
+**3.1.4 Spring 5**
+
+响应式编程
+
+**3.1.5 Spring Boot 2.0**
+
+### 3.2 性能优化
+
+使用单例、使用Future模式、使用线程池、选择就绪、减少上下文切换、减少锁粒度、数据压缩、结果缓存
+
+### 3.3 线上问题分析
+
+**3.3.1 dump获取**
+
+线程Dump、内存Dump、gc情况
+
+**3.3.2 dump分析**
+
+分析死锁、分析内存泄露
+
+**3.3.3 自己编写各种outofmemory，stackoverflow程序**
+
+HeapOutOfMemory、 Young OutOfMemory、MethodArea OutOfMemory、ConstantPool OutOfMemory、DirectMemory OutOfMemory、Stack OutOfMemory Stack OverFlow
+
+**3.3.4 常见问题解决思路**
+
+内存溢出、线程死锁、类加载冲突
+
+**3.3.5 使用工具尝试解决以下问题，并写下总结**
+
+1. 当一个Java程序响应很慢时如何查找问题、
+2. 当一个Java程序频繁FullGC时如何解决问题、
+3. 如何查看垃圾回收日志、
+4. 当一个Java应用发生OutOfMemory时该如何解决、
+5. 如何判断是否出现死锁、
+6. 如何判断是否存在内存泄露
+
+### 3.4 编译原理知识
+
+**3.4.1 编译与反编译**
+
+**3.4.2 Java代码的编译与反编译**
+
+**3.4.3 Java的反编译工具**
+
+**3.4.4 词法分析，语法分析（LL算法，递归下降算法，LR算法），语义分析，运行时环境，中间代码，代码生成，代码优化**
+
+### 3.5 操作系统知识
+
+**3.5.1 Linux的常用命令**
+
+**3.5.2 进程同步**
+
+**3.5.3 缓冲区溢出**
+
+**3.5.4 分段和分页**
+
+**3.5.5 虚拟内存与主存**
+
+### 3.6 数据库知识
+
+**3.6.1 MySql 执行引擎**
+
+**3.6.2 MySQL 执行计划**
+
+如何查看执行计划，如何根据执行计划进行SQL优化
+
+**3.6.3 SQL优化**
+
+**3.6.4 事务**
+
+事务的隔离级别、事务能不能实现锁的功能
+
+**3.6.5 数据库锁**
+
+行锁、表锁、使用数据库锁实现乐观锁、
+
+**3.6.6 数据库主备搭建**
+
+**3.6.7 binlog**
+
+**3.6.8 内存数据库**
+
+h2
+
+**3.6.9 常用的nosql数据库**
+
+redis、memcached
+
+**3.6.10 分别使用数据库锁、NoSql实现分布式锁**
+
+**3.6.11 性能调优**
+
+### 3.7 数据结构与算法知识
+
+**3.7.1 简单的数据结构**
+
+栈、队列、链表、数组、哈希表、
+
+**3.7.2 树**
+
+二叉树、字典树、平衡树、排序树、B树、B+树、R树、多路树、红黑树
+
+**3.7.3 排序算法**
+
+各种排序算法和时间复杂度 深度优先和广度优先搜索全排列、贪心算法、KMP算法、hash算法、海量数据处理
+
+### 3.8 大数据知识
+
+**3.8.1 Zookeeper**
+
+基本概念、常见用法
+
+**3.8.2 Solr，Lucene，ElasticSearch**
+
+在linux上部署solr，solrcloud，，新增、删除、查询索引
+
+**3.8.3 Storm，流式计算，了解Spark，S4**
+
+在linux上部署storm，用zookeeper做协调，运行storm hello world，local和remote模式运行调试storm topology。
+
+**3.8.4 Hadoop，离线计算**
+
+HDFS、MapReduce
+
+**3.8.5 分布式日志收集**
+
+flume，kafka，logstash
+
+**3.8.6数据挖掘**
+
+mahout
+
+### 3.9 网络安全知识
+
+**3.9.1 什么是XSS**
+
+XSS的防御
+
+**3.9.2 什么是CSRF**
+
+**3.9.3 什么是注入攻击**
+
+SQL注入、XML注入、CRLF注入
+
+**3.9.4 什么是文件上传漏洞**
+
+**3.9.5 加密与解密**
+
+MD5，SHA1、DES、AES、RSA、DSA
+
+**3.9.6 什么是DOS攻击和DDOS攻击**
+
+memcached为什么可以导致DDos攻击、什么是反射型DDoS
+
+**3.9.7 SSL、TLS，HTTPS**
+
+**3.9.8 如何通过Hash碰撞进行DOS攻击**
+
+**3.9.9 用openssl签一个证书部署到apache或nginx**
